@@ -1,0 +1,102 @@
+/**
+ * 自定义打印模板样式
+ */
+
+// 全局样式重写
+.hiprint-headerLine,
+.hiprint-footerLine {
+  border-color: red !important;
+}
+
+.hiprint-headerLine:hover,
+.hiprint-footerLine:hover {
+  border-top: 3px dashed red !important;
+}
+
+.hiprint-headerLine:hover:before {
+  content: '页眉线';
+  left: calc(50% - 18px);
+  position: relative;
+  background: #ffff;
+  top: -12px;
+  color: red;
+  font-size: 12px;
+}
+
+.hiprint-footerLine:hover:before {
+  content: '页脚线';
+  left: calc(50% - 18px);
+  position: relative;
+  color: red;
+  background: #ffff;
+  top: -12px;
+  font-size: 12px;
+}
+
+// 打印元素容器
+.hiprint-printTemplate {
+  background-color: #f5f5f5;
+  min-height: 400px;
+  padding: 20px;
+}
+
+// 属性设置容器
+.hinnn-layout-sider {
+  padding: 10px;
+}
+
+// 拖拽元素
+.ep-draggable-item {
+  cursor: move;
+  user-select: none;
+  transition: all 0.2s;
+}
+
+.ep-draggable-item:hover {
+  transform: scale(1.05);
+}
+
+// 选中状态
+.ep-draggable-item.dragging {
+  opacity: 0.5;
+}
+
+// 打印元素
+.hiprint-printElement {
+  border: 1px dashed #ccc;
+  position: relative;
+}
+
+.hiprint-printElement:hover {
+  border-color: #409eff;
+}
+
+.hiprint-printElement.selected {
+  border-color: #409eff;
+  border-width: 2px;
+}
+
+// 设计卡片
+.cpt-design-canvas {
+  background-color: #f5f5f5;
+}
+
+.cpt-sidebar,
+.cpt-properties {
+  background-color: #fff;
+}
+
+// 响应式设计
+@media screen and (max-width: 1400px) {
+  .cpt-sidebar,
+  .cpt-design-canvas,
+  .cpt-properties {
+    height: calc(100vh - 120px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cpt-toolbar {
+    flex-wrap: wrap;
+  }
+}

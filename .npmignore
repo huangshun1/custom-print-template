@@ -1,0 +1,18 @@
+# 源码
+src/
+tsconfig.json
+vite.config.ts
+
+# 配置
+.eslintrc*
+.prettierrc*
+.editorconfig
+.npmignore
+
+# 开发文件
+*.log
+.DS_Store
+*.iml
+
+# 依赖
+node_modules/
